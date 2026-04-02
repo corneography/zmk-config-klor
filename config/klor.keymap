@@ -40,7 +40,6 @@
             bindings = <&kp LC(C)>;
             key-positions = <13 14>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
             layers = <0>;
         };
 
@@ -139,6 +138,13 @@
             require-prior-idle-ms = <30>;
             layers = <1>;
         };
+
+        ctrlcombo {
+            bindings = <&kp LC(A)>;
+            key-positions = <14 12>;
+            timeout-ms = <30>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -207,8 +213,8 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &kp LG(LS(S))   &kp N1  &kp N2  &kp N3  &kp DEL                   &kp RBRC   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-&trans  &kp LEFT_SHIFT  &kp N4  &kp N5  &kp N6  &kp BSPC                  &kp RBKT   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
+        &kp LG(LS(S))   &kp N1  &kp N2  &kp N3  &kp DEL                   &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
+&trans  &kp LEFT_SHIFT  &kp N4  &kp N5  &kp N6  &kp BSPC                  &trans     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
 &trans  &kp PERIOD      &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
                                 &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans
             >;
