@@ -83,7 +83,7 @@
             layers = <0>;
         };
 
-        redoycombo {
+        LOWERredoycombo {
             bindings = <&kp LC(Y)>;
             key-positions = <24 26>;
             timeout-ms = <30>;
@@ -144,6 +144,46 @@
             key-positions = <14 12>;
             timeout-ms = <30>;
             layers = <0>;
+        };
+
+        LPINKYtabright {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <13 14>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <3>;
+        };
+
+        LPINKYtableft {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <12 13>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <3>;
+        };
+
+        LPINKYtabclose {
+            bindings = <&kp LC(W)>;
+            key-positions = <12 14>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <3>;
+        };
+
+        LPINKYtabreopen {
+            bindings = <&kp LC(LS(T))>;
+            key-positions = <14 25>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <3>;
+        };
+
+        LPINKYtabnew {
+            bindings = <&kp LC(T)>;
+            key-positions = <25 26>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <3>;
         };
     };
 
@@ -252,10 +292,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        adjust_layer {
+        l_pinky {
             // ┌───────────────────────────────────────────────────────────┐
 
-            label = "ADJUST";
+            label = "LPINKY";
 
             // └───────────────────────────────────────────────────────────┘
             /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
@@ -269,31 +309,35 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &trans  &trans    &kp UP    &trans     &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp K_BACK  &kp UP     &kp K_NEXT  &trans                   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT    &kp DOWN   &kp RIGHT   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME    &kp PG_UP  &kp PG_DN   &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans     &trans      &trans   &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_4 {
+        r_pinky {
             bindings = <
         &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "RPINKY";
         };
 
-        layer_5 {
+        f_layer {
             bindings = <
         &kp F1  &kp F2   &kp F3   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                          &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "FUNCTION";
         };
     };
 };
